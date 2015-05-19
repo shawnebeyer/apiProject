@@ -1,0 +1,212 @@
+@import "normalize";
+@import "variables";
+@import "typography";
+@import "mainStyles";
+
+
+.test {
+	padding: 0;
+	margin: 0;
+	font-size: 20px;
+	text-align: left;
+	transition: all 0.5s;
+}
+
+.remove {
+	display: none;
+	transition: all 0.5s;
+}
+body {
+	background-image: url(../images/eating2.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	transition: all 0.5s;
+	text-align: center;
+}
+
+.mainContainer {
+	width: 100%;
+}
+
+.title {
+	width: 100%;
+	position: fixed;
+	z-index: 9999;
+	height: 95px;
+	.titleName, .venueTitle {
+		float: left;
+		width: 50%;
+	}
+}
+
+
+.containerHalf {
+	float: left;
+}
+
+.containerFixed {
+	position: fixed;
+	z-index: 999;
+	background: white;
+	padding-top: 10px;
+	width: 45%;
+	height: 100vh;
+}
+
+.containerList {
+	float: right;
+	width: 55%;
+}
+
+.begin {	
+	width: 100%;
+	text-align: center;
+	// background: rgba(22,37,37, 0.9);
+	background: #58899a;
+	border-radius: 2px;
+	padding: 10px 0 15px 0;
+	.beginTop {
+		padding-bottom: 25px;
+	}
+	.beginBottom {
+		text-align: center;
+	}
+}
+
+.titlePhotos {
+	flex: 1 0 auto;
+	text-align: center;
+	.titlePhotosBottom p {
+		margin: 0;
+		color: white;
+		// letter-spacing: 6px;
+	}
+	.steps {
+		font-family: $headerFont;
+		font-weight: 900;
+		font-size: 30px;
+		letter-spacing: 7px;
+	}
+}
+
+.stepsNumber {
+	letter-spacing: 4px;
+}
+
+form {
+	width: 35%;
+	margin: auto;
+}
+form label[for=search] {
+	font-family: $restaurantFont;
+	letter-spacing: 4px;
+	padding-top: 3px;
+	text-transform: uppercase;
+	font-weight: 100;
+	padding-bottom: 7px;
+	color: white;
+	background: rgba(231, 76, 60, 1.0);
+	text-align: center;
+} 
+
+form input[type=search]  {
+	font-size: 20px;
+	font-family: $searchFont;
+	border: none;
+	color: white;
+	letter-spacing: 1px;
+	font-weight: 100;
+	padding: 0 4px 0 4px;
+	transition: all 0.5s;
+	text-align: center;
+	outline: none;
+	&:focus {
+		background: rgba(22,37,37, 0.5);
+	}
+}
+
+.noFoodForYou {
+	width: 60%;
+	text-align: center;
+	margin: auto;
+	padding: 20px;
+	font-family: $restaurantFont;
+	color: white;
+	letter-spacing: 7px;
+	line-height: 40px;
+	background: rgba(100, 100, 100, 0.6);
+	margin-top: 20px;
+}
+
+.lunchChoice {
+	width: 100%;
+	height: 100px;
+	background: white;
+	transition: all 0.5s;
+	border: 1px solid $mediumGrey;
+	border-top: 0;
+	border-right: 0;
+	padding-left: 5px;
+	&:hover {
+		// background: rgba(200, 200, 200, 0.8);
+		background: rgba(88,137,154, 0.9);
+		a {
+			color: white;
+			transition: all 0.5s;
+			&:hover {
+				color: tomato;
+			}
+		}
+	}
+	p {
+		font-size: 12px;
+		margin: 0;
+	}
+	img {
+		float: right;
+		padding-left: 10px;
+	}
+	.address {
+		padding-bottom: 15px;
+	}
+	.dist {
+		text-align: right;
+		padding-right: 15px;
+	}
+	a {
+		float: left;
+		font-size: 14px;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-family: $linkFont;
+		color: $mediumGrey;
+	}
+}
+
+.returnInfo {
+	width: 100%;
+	float: left;
+}
+
+.returnInfoBackground {
+	background: white;
+	height: 100vh;
+}
+
+.map {
+	width: 100%;
+	float: left;
+	// padding-bottom: 40px;
+}
+
+#map-canvas {
+	height: 400px;
+	// height: 100vh;
+	margin: 0 auto;
+	// margin-bottom: 20px;
+}

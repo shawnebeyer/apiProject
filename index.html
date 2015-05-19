@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Eat@Park</title>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="styles/animate.css">
+	<link rel="stylesheet" href="styles/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Lato|Josefin+Sans|Montserrat:400,700|Oswald|Open+Sans|Permanent+Marker' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<section class="mainContainer">
+		<section class="containerHalf containerFixed">
+			<div class="wrapper">
+				<h1 class="animated bounce">Hey lunch, Meet park.</h1>
+				<header class="begin">
+					<section class="beginTop flexBoxRow">
+						<!-- noun project images, for fun. -->
+						<div class="titlePhotos">
+							<div class="titlePhotosTop">
+								<img src="images/thinking1.svg" alt="">
+							</div>
+							<div class="titlePhotosBottom">
+								<p class="stepsNumber">step 1:</p>
+								<p class="steps">Think</p>
+							</div>
+						</div>
+						<div class="titlePhotos">
+							<div class="titlePhotosTop">
+								<img src="images/food1.svg" alt="">
+							</div>
+							<div class="titlePhotosBottom">
+								<p class="stepsNumber">step 2:</p>
+								<p class="steps">Eat</p>
+							</div>
+						</div>
+						<div class="titlePhotos">
+							<div class="titlePhotosTop">
+								<img src="images/park2.svg" alt="">
+							</div>
+							<div class="titlePhotosBottom">
+								<p class="stepsNumber">step 3:</p>
+								<p class="steps">Walk</p>
+							</div>	
+						</div>
+					</section>
+					<section class="beginBottom">
+						<form action="" class="search flexBoxColumn">
+						    <label for="search">I feel like...</label>
+						    <input type="search" name="search" id="search" placeholder="start searching!">
+						</form>
+					</section>
+				</header>	
+				<section class="map">
+					<div id="map-canvas">
+					<p class="directionWelcome">Welcome to your lunch hour.</p>
+					<p class="direction">
+						an app to help you have a productive, vitamin-C filled lunch hour.
+					</p>
+					<p class="direction">
+						Get started by searching above and check out all your amazing options on the right. A map of closest parks will show up here, so get out there and eat near a tree.</p>
+					<p class="siteCreds">
+						this app was developed by <a href="http://www.shawnebeyer.com">shawn ebeyer</a> using the FourSquare & Google Maps API's. Amazing SVG's Created by Antar Walker and Taylor Medlin from the Noun Project &copy 2015
+					</p>
+					</div>
+				</section>
+			</div>
+		</section>
+		<section class="containerHalf containerList">
+			<section class="returnInfo">
+				<div class="container" id="container"></div>
+				<!-- <section class="returnHalf mapHalf">
+					<div id="map-canvas"></div>
+				</section> -->
+			</section>
+		</section>
+	</section>
+
+	<script type="text/javascript"
+	     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCly51JcgEgTAEDOyMrQHm46fjCJyOlgYU">
+	   </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
+
+<!-- Credits -->
+
+<!-- Park Icon: Created by Antar Walker and Taylor Medlin from the Noun Project -->
+<!-- Burger Icon: Created by Taylor Medlin from the Noun Project -->

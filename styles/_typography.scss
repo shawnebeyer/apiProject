@@ -1,0 +1,56 @@
+h1 {
+	font-family: $headerFont;
+	font-size: 42px;
+	font-weight: 700;
+	color: rgba(22,37,37, 0.9);
+	letter-spacing: 10px;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0;
+	padding: 0 10px 10px 10px;
+	// background: rgba(100, 100, 100, 0.2);
+}
+
+h2 {
+	// float: left;
+	margin: 0;
+	padding: 10px 0 5px 0;
+	font-family: $restaurantFont;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font-size: 19px;
+}
+
+p {
+	font-family: $paragraphFont;
+	padding: 0;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+p.direction {
+	color: rgba(22,37,37, 0.5);
+	width: 75%;
+	text-align: center;
+	margin: auto;
+	padding: 20px 0 20px 0;
+	line-height: 25px;
+}
+
+p.directionWelcome {
+	margin: 0;
+	padding-top: 10px;
+}
+
+p.siteCreds {
+	font-size: 12px;
+	color: rgba(22,37,37, 0.5);
+	a {
+		text-decoration: none;
+		color: black;
+		transition: all 0.5s;
+		&:hover {
+			color: tomato;
+		}
+	}
+}
