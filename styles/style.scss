@@ -1,5 +1,6 @@
 @import "normalize";
 @import "variables";
+@import "mixins";
 @import "typography";
 @import "mainStyles";
 
@@ -9,12 +10,12 @@
 	margin: 0;
 	font-size: 20px;
 	text-align: left;
-	transition: all 0.5s;
+	@include transitionAll;
 }
 
 .remove {
 	display: none;
-	transition: all 0.5s;
+	@include transitionAll;
 }
 body {
 	background-image: url(../images/eating2.jpg);
@@ -25,7 +26,7 @@ body {
 .wrapper {
 	margin: 0 auto;
 	width: 100%;
-	transition: all 0.5s;
+	@include transitionAll;
 	text-align: center;
 }
 
@@ -66,8 +67,7 @@ body {
 .begin {	
 	width: 100%;
 	text-align: center;
-	// background: rgba(22,37,37, 0.9);
-	background: #58899a;
+	background: rgba(22,37,37, 0.9);
 	border-radius: 2px;
 	padding: 10px 0 15px 0;
 	.beginTop {
@@ -79,11 +79,15 @@ body {
 }
 
 .titlePhotos {
-	flex: 1 0 auto;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 0 auto;
+	    -ms-flex: 1 0 auto;
+	        flex: 1 0 auto;
 	text-align: center;
 	.titlePhotosBottom p {
 		margin: 0;
 		color: white;
+		// color: rgba(22,37,37, 0.9);
 		// letter-spacing: 6px;
 	}
 	.steps {
@@ -115,6 +119,7 @@ form label[for=search] {
 } 
 
 form input[type=search]  {
+	@include transitionAll;
 	font-size: 20px;
 	font-family: $searchFont;
 	border: none;
@@ -122,7 +127,6 @@ form input[type=search]  {
 	letter-spacing: 1px;
 	font-weight: 100;
 	padding: 0 4px 0 4px;
-	transition: all 0.5s;
 	text-align: center;
 	outline: none;
 	&:focus {
@@ -147,7 +151,7 @@ form input[type=search]  {
 	width: 100%;
 	height: 100px;
 	background: white;
-	transition: all 0.5s;
+	@include transitionAll;
 	border: 1px solid $mediumGrey;
 	border-top: 0;
 	border-right: 0;
@@ -157,7 +161,7 @@ form input[type=search]  {
 		background: rgba(88,137,154, 0.9);
 		a {
 			color: white;
-			transition: all 0.5s;
+			@include transitionAll;
 			&:hover {
 				color: tomato;
 			}
@@ -201,6 +205,7 @@ form input[type=search]  {
 .map {
 	width: 100%;
 	float: left;
+	// padding-top: 20px;
 	// padding-bottom: 40px;
 }
 
@@ -209,4 +214,120 @@ form input[type=search]  {
 	// height: 100vh;
 	margin: 0 auto;
 	// margin-bottom: 20px;
+}
+
+
+
+// MEDIA QUERIES
+
+/* Portrait tablet and small desktops */
+@media (max-width: 995px) {
+	
+	h1 {
+		font-size: 20px;
+	}
+
+	.beginTop {
+		// max-width: 90%;
+	}
+
+	.beginBottom form {
+		width: 50%;
+	}
+
+	p.direction {
+		font-size: 13px;
+		padding: 20px 0 0 0;
+	}
+
+	p.siteCreds {
+		padding-top: 10px;
+	}
+
+	.titlePhotos .steps {
+		font-size: 25px;
+	}
+
+	.mainContainer {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				-webkit-flex-direction: column;
+				    -ms-flex-direction: column;
+				        flex-direction: column;
+	}
+
+	.containerHalf {
+		min-width: 100%;
+		flex: 1 0 auto;
+		position: relative;
+		// height: 80vh;
+	}
+
+	#map-canvas {
+		width: 85%;
+		margin-top: 35px;
+	}
+
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 568px) {
+
+	
+}
+
+/* Landscape phones and down */
+@media (max-width: 740px) {
+
+
+	body {
+		background-image: none;
+		background: white;
+	}
+
+	.containerHalf {
+		height: 200vh;
+	}
+	
+}
+
+@media (max-width: 325px) {
+	.containerHalf {
+		height: 150vh;
+	}
+
+	.containerList {
+		z-index: 9999;
+	}
+
+	.lunchChoice {
+		border-left: none;
+		h2 {
+			font-size: 15px;
+		}
+	}
+
+	.lunchChoice img {
+		display: none;
+	}
+}
+
+// @media (max-width: 377)
+
+@media (min-device-width: 326px) 
+  and (max-device-width: 569px) {
+
+	.containerList {
+		z-index: 9999;
+	}
+
+	.containerHalf {
+		height: 150vh;
+	}
+	
 }
